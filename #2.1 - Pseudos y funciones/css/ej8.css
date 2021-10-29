@@ -4,10 +4,10 @@ ul{
 
 div{
     background-color: rgb(255, 255, 136);
-    width: fit-content;
+    width: 9%;
     padding: 10px 16px 10px 2px;
     border-radius: 25px;
-    box-shadow: 5px 5px 5px blue;
+    box-shadow: 0px 0px 50px 0px blue;
 }
 
 div:hover{
@@ -22,12 +22,14 @@ li:hover{
 li:first-child {
     text-decoration: overline black;
     list-style: circle black;
-    color: red;
     
 }
-li:last-child{
-    text-decoration:underline black;
+
+li:nth-child(2), li:nth-child(3), li:nth-child(4), li:last-child {
+    color: red;
 }
+
+
 li:first-child::first-letter, li:last-child::first-letter{
     font-size: 1.5em;
 }
@@ -36,5 +38,6 @@ li:first-child::first-letter{
 } 
 li:last-child::first-letter{
     color: green;
+    text-decoration: overline black;
 }
 
