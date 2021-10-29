@@ -1,0 +1,59 @@
+/*list-style-image: url('../img/estrella.png');*/
+header {
+    text-align: center;
+    background-color: rgb(245, 245, 173);
+    height: 50px;
+}
+
+footer > img {
+    float: right;
+    width: 70px;
+    height: 45px;
+}
+
+footer {
+    background-color:rgb(241, 241, 241);
+    height:50px;
+    padding: 10px;
+    padding-bottom: 3px;
+}
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 17%;
+}
+
+section {
+    width: 60%;
+    background-color: rgb(131, 210, 255);
+    flex: right;
+}
+
+.carpeta::before {
+    content: " " url("../img/carpeta.png");
+}
+
+.archivo::before {
+    content: " " url("../img/archivo.png");
+}
+
+#oscuro {
+    background-color: rgb(190, 190, 190);
+}
+
+ul {
+    list-style: none;
+}
+
+.sidebar {
+    border: 1px solid black ;
+    font-weight: bold;
+}
+
+.sidebar > div:first-child {
+    background-color:rgb(196, 196, 196);
+}
