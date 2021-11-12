@@ -1,0 +1,95 @@
+body{
+  background: url(https://www.know-angels.com/wp-content/uploads/2019/08/sunlight-166733_1920.jpg) no-repeat fixed center;
+  color: #d8ab4a;
+  font-family: sans-serif;
+  text-align: center;
+  background-size: cover;
+  
+}
+
+#tablero{
+  box-shadow: 0 10px 10px -6px rgba(0,0,0,.6);
+  border-radius: 3px;
+  border-collapse: collapse;
+  width: 400px;
+  height: 400px;
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+}
+
+tr > td {
+  text-align: center;
+}
+
+#tablero td{
+  font-size: 36px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(223, 214, 172);
+}
+
+#tablero tr:nth-child(odd) td:nth-child(even),
+#tablero tr:nth-child(even) td:nth-child(odd){
+  background: url(https://www.vbgardens.org/wp-content/uploads/2017/07/NEsxQB.png) no-repeat fixed center;
+
+}
+
+#tablero tr:nth-child(n+7) td{
+  color: rgb(39, 39, 39);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+}
+
+#tablero tr td:hover {
+  color: rgb(217, 255, 0)55, 255, 255;
+}
+
+.header  {
+  background: url(https://www.vbgardens.org/wp-content/uploads/2017/07/NEsxQB.png) no-repeat fixed center;
+  color: blanchedalmond;
+  font-size: 14px;
+  padding: 1rem;
+
+}
+
+.form {
+  position: relative;
+  float: left;
+  background: url(https://image.freepik.com/foto-gratis/hermoso-antiguo-antiguo-textura-madera-oscura-textura-fondo-contexto-espacio-copia_1220-1277.jpg) center;
+  height: 8rem;
+  width: 17rem;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+input:hover {
+  border: 1px solid rgb(58, 144, 243);
+}
+
+.btn {
+  background: url(https://www.vbgardens.org/wp-content/uploads/2017/07/NEsxQB.png) center;
+  color: white;
+}
+.btn:hover {
+  transform:scale(1.5);
+}
+
+table {
+  border-right: 7px solid #a06731;
+  border-top: 3px solid #a06731;
+
+
+}
+
+
+@media only screen and (max-width: 1127px) {
+
+  .form {
+    display: none;
+  }
+}
