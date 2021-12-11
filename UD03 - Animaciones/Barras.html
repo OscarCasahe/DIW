@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras</title>
+    <style>
+        * {
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .c1,
+        .c2 {
+            margin: 0 auto;
+            width: 500px;
+            height: 20px;
+            background-color: yellow;
+            /*   animation: rotacion 1s infinite; */
+        }
+    </style>
+</head>
+
+<body>
+    <p><input type="button" value="start"><input type="button" value="stop"></p>
+    <p>
+        <div class="c1" id="c1">C1</div>
+    </p>
+    <p>
+        <div class="c2" id="c2">C2</div>
+    </p>
+
+    <script>
+        var keyframesC1 = [{
+                transform: 'translateX(0%)',
+                backgroundColor: 'yellow'
+            },
+            {
+                backgroundColor: 'red',
+                offset: 0.3
+            },
+            {
+                transform: 'translateX(100%)',
+                backgroundColor: 'yellow'
+            }
+        ]
+
+        var paramsC1 = {
+            duration: 2000,
+            iterations: Infinity
+        };
+
+        var c1 = document.getElementById('c1').animate(keyframesC1, paramsC1);
+
+        var keyframesC2 = [{
+                transform: 'translateX(100%)',
+                backgroundColor: 'red'
+            },
+            {
+                backgroundColor: 'yellow',
+                offset: 0.6
+            },
+            {
+                transform: 'translateX(0%)',
+                backgroundColor: 'red'
+            }
+        ]
+
+        var paramsC2 = {
+            duration: 2000,
+            iterations: Infinity
+        };
+
+        var c1 = document.getElementById('c2').animate(keyframesC2, paramsC2);
+    </script>
+</body>
+
+</html>

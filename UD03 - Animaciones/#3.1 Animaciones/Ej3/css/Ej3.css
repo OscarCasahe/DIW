@@ -1,0 +1,144 @@
+*  {
+
+}
+
+.container {
+    padding: 2rem;
+    background-image: url(../img/zelda.jpg);
+    background-size: 100% 100%;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+}
+
+.zelda {
+    border: 2px solid rgb(0, 97, 0);
+    font-size: 4rem;
+    border-radius:  8px;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 0, 0, 0.438);
+    color: rgb(192, 190, 57);
+    text-align: center;
+    animation: panel_luminoso 1.5s infinite;
+}
+
+.main {
+    display:flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.barra {
+    background-color: rgba(145, 112, 91, 0.527);
+    padding: 0.2rem;
+    border: 1px solid rgb(0, 97, 0);
+    border-radius: 2rem;
+    width: 70%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.cargado {
+    width: 6%;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    text-align: right;
+    animation: cargar 15s infinite;
+}
+
+.cargado::after {
+    content: "0%";
+    animation: porcentaje 15s infinite;
+}
+
+.elementos {
+    display: flex;
+    padding: 2rem;
+}
+
+img {
+    width: 25%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    color: aliceblue;
+
+}
+
+.espacio {
+    margin-right: 8rem;
+}
+
+
+@keyframes panel_luminoso {
+    50% {
+        color: rgb(112, 110, 0);
+    }
+}
+
+@keyframes cargar {
+
+    0% {
+        color: red;
+        width: 0%;
+    }
+
+    25% {
+        color: rgb(126, 5, 5);  
+    }
+    50% {
+        color: rgb(245, 168, 1);
+}
+    75% {
+        color: black;
+    }
+
+    100% {
+        background-color: rgb(202, 255, 10);
+        width: 100%;
+
+    }
+}
+
+
+@keyframes porcentaje {
+    0% {
+        content: '0%';
+    }
+    25% {
+        content: '25%';
+    }
+    50% {
+        content: '50%';
+    }
+    75% {
+        content: '75%';
+    }
+    100% {
+        content: '100%';
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .zelda {
+        font-size: 2rem;
+    }
+
+
+    footer::after {
+        content: "🎆🎇";
+    }
+
+    footer::before {
+        content: "🎆🎇";
+    }
+
+}
+

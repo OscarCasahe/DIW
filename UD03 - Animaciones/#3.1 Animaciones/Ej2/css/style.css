@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0, auto;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0px;
+    padding: 0rem;
+}
+
+body {
+    margin: 10px auto;
+    width: 90%;
+}
+
+.cielo {
+    background-image: url(../img/sky.webp);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 10px;
+    perspective-origin: 50% 50%;
+    animation: animation 100s linear infinite;
+    position: relative;
+}
+
+/* Animacion del cielo */
+@keyframes animation {
+    100% {
+        background-position: 0px -3000px;
+    }
+}
+
+.luna {
+    width: 100%;
+    height: 25%;
+}
+
+.luna>img {
+    width: 8%;
+    margin: 1rem;
+}
+
+.move {
+    animation: desplazar 10s infinite;
+}
+
+.medio {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-end;
+}
+
+.medio>img {
+    width: 5%;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    animation: 7s rotate linear infinite;
+    transform-origin: 50% 50%;
+    animation: desplazar2 7s infinite;
+}
+
+.tierra {
+    background-image: url(../img/nieve1.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    padding-top: 14rem;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(136, 115, 75);
+    color: white;
+    clear: both;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+footer>img {
+    width: 3%;
+    margin-left: 1rem;
+}
+
+@keyframes desplazar {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(1100%);
+    }
+}
+
+@keyframes desplazar2 {
+    from {
+        transform: translateX(0%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(900%) rotate(25deg);
+
+    }
+}

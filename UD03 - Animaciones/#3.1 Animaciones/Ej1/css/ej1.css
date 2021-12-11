@@ -1,0 +1,269 @@
+
+body {
+    background-color: #00459e;
+    text-align: center;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+    background-color: #00459e;
+    margin: 0px auto;
+    padding: 0.5rem;
+    height: 35rem;
+}
+
+.grid-container > div {
+    border: 2px solid rgb(108, 114, 22);
+    border-radius: 8px;
+    padding: 2rem
+
+}
+
+
+.item1 {
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url(../img/larga.jpg);
+    background-size: 100% 100%;
+    animation: dissapear1 10s infinite alternate;
+}
+
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url(../img/canasta.jpg);
+    background-size: 100% 100%;
+    animation: dissapear2 10s infinite alternate;
+}
+
+.item3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url(../img/kobe.png);
+    background-size: 100% 100%;
+    animation: dissapear3 10s infinite alternate;
+}
+
+.item4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url(../img/Maya.jpg);
+    background-size: 100% 100%;
+    animation: dissapear4 10s infinite alternate;
+
+}
+
+.item5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-image: url(../img/canasta2.jpg);
+    background-size: 100% 100%;
+    animation: dissapear5 10s infinite alternate;
+}
+
+.item6 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(../img/curryLillard.jpg);
+    background-size: 180% 120%;
+    background-position-y: center; 
+    background-position-x: left; 
+    animation: move6 10s infinite alternate;
+}
+.item7 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(../img/cuadricula.jpg);
+    background-size: 300% 250%;
+    animation: cuadricula7 10s infinite;
+}
+
+.item8 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url(../img/Finales.jpg);
+    background-size: 150% 150%;
+    background-position-y: 30%; 
+    animation: move8 10s infinite alternate;
+
+}
+
+@keyframes dissapear1 {
+    50% {
+        background-image: url(../img/lebron.jpg);
+    }
+}
+
+@keyframes dissapear2 {
+    50% {
+        background-image: url(../img/canasta2.jpg);
+    }
+}
+
+@keyframes dissapear3 {
+    50% {
+        background-image: url(../img/jordan-roman.jpg);
+    }
+}
+
+@keyframes dissapear4 {
+    50% {
+        background-image: url(../img/balon.jpg);
+    }
+}
+
+@keyframes dissapear5 {
+    50% {
+        background-image: url(../img/2k.jpg);
+    }
+}
+
+
+@keyframes move8 {
+    from {
+        background-position-x: 0%;
+        opacity: 1;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+@keyframes move6 {
+    from {
+        background-position-x: 0%;
+        opacity: 1;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+
+
+@keyframes cuadricula7 {
+    0% {
+        background-position-x:left;
+        background-position-y:top;
+    }
+
+    20% {
+        background-position-x:center;
+        background-position-y:top;
+    }
+
+    40% {
+        background-position-x:right;
+        background-position-y:top;
+    }
+
+    60% {
+        background-position-x:left;
+        background-position-y:bottom;
+    }
+
+    80% {
+        background-position-x:center;
+        background-position-y:bottom;    }
+
+    100% {
+        background-position-x:right;
+        background-position-y:bottom;    }
+
+
+}
+
+
+
+@media (max-width: 400px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto
+                             auto auto auto auto auto auto;
+    }
+
+    
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 12;
+    }
+    
+    .item2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+    
+    .item3 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .item4 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 12;
+        grid-row-end: 13;
+    
+    }
+    
+    .item5 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 12;
+    }
+    
+    .item6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+    .item7 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+    
+    .item8 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+    }
+
+    }
