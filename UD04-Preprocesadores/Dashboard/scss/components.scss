@@ -1,0 +1,8 @@
+@mixin paddingGeneral ($param){
+    padding: $param;
+}
+
+@mixin logoEscritorio {
+    width: 4%;
+    border-radius: 2rem;
+}
