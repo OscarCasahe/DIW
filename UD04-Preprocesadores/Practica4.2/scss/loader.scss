@@ -1,0 +1,80 @@
+////
+///Actividad Loader.
+///@author Óscar Casanova
+///@since 1.0
+////
+
+/// Tiempo de duración general
+/// @type Number
+///
+$duration: 10s !global;
+
+///
+///Centrar contenido
+///
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+///
+///Eliminar el contenido innecesario del loader.
+///
+@mixin reset-load {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+}
+
+///
+/// Default size
+/// @param {Number} $width [100%] - valor de width
+/// @param {Number} $heigth [100%] - valor de height
+///
+@mixin size($width: 100%, $height: 50px) {
+  width: $width;
+  height: $height;
+}
+
+* {
+  @include reset;
+}
+
+.loader{
+  display: block;
+  position: relative;
+  border:2px solid #fff;
+  @include size($height: 50px);
+
+  &::before {
+    background-color: red;
+    animation: load $duration linear infinite;
+    @include reset-load;
+    @include size(0, $height: 100%);
+  }
+
+  &::after {
+    font-size: 30pt;
+    color: yellow;
+    animation: text_load $duration linear infinite;
+    @include reset-load;
+    @include size(100%, 100%);
+  }
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+      
+  @keyframes text_load {
+    @for $i from 1 through 10 {
+      #{calc($i*10)}% {
+        content:'#{$i*10}%'
+      }
+    }
+    }

@@ -1,0 +1,49 @@
+/// Máximo de columnas default
+/// @type Number
+///
+$MAX_COLUMNS: 4 !default;
+
+/// Mapa con las medidas responsive
+/// @type Map
+///
+$RESPONSIVE_COLUMNS: (
+  1024px: 3,
+  768px: 2,
+  480px: 1,
+);
+
+///
+/// Ajuste de tamaño para las imágenes.
+/// @param {Number} $n
+///
+@mixin resize($n) {
+  .gallery img {
+    width: ((100 / $n)) * 1%;
+  }
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.gallery {
+  display: flex;
+  background-color: #000;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+}
+
+@include resize(4);
+
+
+///
+/// Each para crear responsividad.
+///
+@each $size, $value in $RESPONSIVE_COLUMNS {
+  @media screen and (max-width: $size) {
+    @include resize($value);
+  }
+}
